@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/components/profile_widget.dart';
+import 'package:portfolio/components/tecnologies_widget.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({super.key});
@@ -16,8 +18,8 @@ class _PortfolioState extends State<Portfolio> {
       ),
       body: Column(
         children: [
-          
-          
+          ProfileWidget(),
+          TecnologiesWidget()
         ],
       ),
     );
