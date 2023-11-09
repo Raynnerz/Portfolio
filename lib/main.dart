@@ -3,7 +3,7 @@ import 'package:portfolio/screens/portfolio.dart';
 
 
 void main() {
-  runApp(const MainApp());
+  runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
