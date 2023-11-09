@@ -1,37 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/components/custom_icons_icons.dart';
+import 'package:portfolio/utils/custom_icons_icons.dart';
 import 'package:portfolio/components/socialbutton_widget.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class ProfileWidget extends StatelessWidget {
+
   const ProfileWidget({super.key});
-
-  _followLinkGithub() async {
-    const url = 'https://github.com/Raynnerz';
-    if (await canLaunchUrl(Uri.parse(url))) {
-      await launchUrl(Uri.parse(url));
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
-  _followLinkInstagram() async {
-    const url = 'https://www.instagram.com/_raynner/';
-    if (await canLaunchUrl(Uri.parse(url))) {
-      await launchUrl(Uri.parse(url));
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
-  _followLinkLinkedin() async {
-    const url = 'https://www.linkedin.com/in/raynner-rodrigues-380744250/';
-    if (await canLaunchUrl(Uri.parse(url))) {
-      await launchUrl(Uri.parse(url));
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -117,7 +90,7 @@ class ProfileWidget extends StatelessWidget {
                           color: Colors.white,
                         ),
                         cor: Colors.black,
-                        onPressed: _followLinkGithub(),
+                        websiteUrl: 'https://github.com/Raynnerz',
                       ),
                       SizedBox(
                         width: 40,
@@ -129,7 +102,8 @@ class ProfileWidget extends StatelessWidget {
                           CustomIcons.instagram,
                           color: Colors.white,
                         ),
-                        cor: Color.fromARGB(255, 212, 12, 72)
+                        cor: Color.fromARGB(255, 212, 12, 72),
+                        websiteUrl: 'https://www.instagram.com/_raynner/',
                       ),
                       SizedBox(
                         width: 40,
@@ -141,7 +115,8 @@ class ProfileWidget extends StatelessWidget {
                           CustomIcons.linkedin,
                           color: Colors.white,
                         ),
-                        cor: Color.fromARGB(255, 7, 32, 255)
+                        cor: Color.fromARGB(255, 7, 32, 255),
+                        websiteUrl: 'https://www.linkedin.com/in/raynner-rodrigues-380744250/',
                       ),
                     ],
                   )

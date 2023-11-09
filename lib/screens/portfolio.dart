@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/profile_widget.dart';
 import 'package:portfolio/components/tecnologies_widget.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({super.key});
