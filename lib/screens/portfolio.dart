@@ -18,18 +18,32 @@ class _PortfolioState extends State<Portfolio> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
       ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 10,
+      body: ListView(
+        shrinkWrap: true,
+        children: const [
+          Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  SizedBox(
+                    height: 10,
+                  ),
+                  ProfileWidget(),
+                  Column(
+                    children: [
+                      SizedBox(
+                        height: 40,
+                      ),
+                      TecnologiesWidget()
+                    ],
+                  )
+                ],
+              )
+            ],
           ),
-          ProfileWidget(),
-          SizedBox(
-            height: 10,
-          ),
-          TecnologiesWidget()
         ],
-      ),
+      )
     );
   }
 }

@@ -3,7 +3,7 @@ import 'package:portfolio/components/socialbutton_widget.dart';
 
 class CardWidget extends StatelessWidget {
   final Text title;
-  final Text description;
+  final String description;
   final String text;
   final Icon icon;
   final Color? cor;
@@ -35,30 +35,33 @@ class CardWidget extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               ListTile(
-              title: title,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(description.toString(), style: TextStyle(color: Color.fromARGB(255, 170, 170, 170)),),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.all(20),
-                  child: SocialButton(
-                    text: text,
-                    corTexto: corTexto,
-                    icon: icon, 
-                    websiteUrl: websiteUrl,
-                    cor: cor,
-                  ),
-                )
-              ],
-            )
-          ],
+                title: title,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(description.toString(), style: TextStyle(color: Color.fromARGB(255, 170, 170, 170)),),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.all(20),
+                    child: SocialButton(
+                      text: text,
+                      corTexto: corTexto,
+                      icon: icon, 
+                      websiteUrl: websiteUrl,
+                      cor: cor,
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
         ),
-      ),
       ),
     );
   }
