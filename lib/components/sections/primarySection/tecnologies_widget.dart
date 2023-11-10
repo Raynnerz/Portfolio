@@ -40,11 +40,7 @@ class _TecnologiesWidgetState extends State<TecnologiesWidget> {
                 title: Text('Python',
                   style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold, color: Color.fromARGB(255, 152, 199, 33)),
                 ), 
-                description: '''Python é conhecido por sua simplicidade, legibilidade e facilidade de aprendizado.
-                A linguagem é altamente versátil, com uma ampla variedade de bibliotecas e frameworks para diversas aplicações, 
-                como web (Django, Flask), ciência de dados (NumPy, Pandas) e automação (Automate the Boring Stuff). 
-                Python é interpretado, o que permite desenvolvimento ágil e é reconhecido por seu forte suporte à programação 
-                orientada a objetos e funcional.''',
+                description: '''Python é conhecido por sua simplicidade, legibilidade e facilidade de aprendizado. A linguagem é altamente versátil, com uma ampla variedade de bibliotecas e frameworks para diversas aplicações, como web (Django, Flask), ciência de dados (NumPy, Pandas) e automação (Automate the Boring Stuff). Python é interpretado, o que permite desenvolvimento ágil e é reconhecido por seu forte suporte à programação orientada a objetos e funcional.''',
                 text: 'Repositório Github',
                 corTexto: Colors.white,
                 icon: Icon(
@@ -58,8 +54,7 @@ class _TecnologiesWidgetState extends State<TecnologiesWidget> {
                 title: Text('Html',
                   style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold, color: Color.fromARGB(255, 243, 159, 33)),
                 ), 
-                description: '''HTML é uma linguagem de marcação usada para estruturar páginas web de maneira simples e acessível, 
-                sendo essencial na criação de conteúdo online, e pode ser combinada com CSS e JavaScript para adicionar estilo e interatividade.''',
+                description: '''HTML é uma linguagem de marcação usada para estruturar páginas web de maneira simples e acessível, sendo essencial na criação de conteúdo online, e pode ser combinada com CSS e JavaScript para adicionar estilo e interatividade.''',
                 text: 'Repositório Github',
                 corTexto: Colors.white,
                 icon: Icon(
@@ -73,10 +68,7 @@ class _TecnologiesWidgetState extends State<TecnologiesWidget> {
                 title: Text('Css',
                   style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold, color: Colors.blue),
                 ), 
-                description: '''CSS (Cascading Style Sheets) é uma linguagem usada para estilizar páginas web, 
-                controlando o layout, cores e aparência. Suas propriedades incluem a separação do conteúdo 
-                (HTML) e estilo, permitindo o design flexível e responsivo das páginas. CSS é amplamente 
-                usado para criar designs atraentes e consistentes em sites, tornando a experiência do usuário mais agradável e acessível.''',
+                description: '''CSS (Cascading Style Sheets) é uma linguagem usada para estilizar páginas web, controlando o layout, cores e aparência. Suas propriedades incluem a separação do conteúdo (HTML) e estilo, permitindo o design flexível e responsivo das páginas. CSS é amplamente usado para criar designs atraentes e consistentes em sites, tornando a experiência do usuário mais agradável e acessível.''',
                 text: 'Repositório Github',
                 corTexto: Colors.white,
                 icon: Icon(
@@ -90,10 +82,7 @@ class _TecnologiesWidgetState extends State<TecnologiesWidget> {
                 title: Text('MongoDB',
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 67, 244, 54)),
                 ), 
-                description: '''CSS (Cascading Style Sheets) é uma linguagem usada para estilizar páginas web, controlando o layout, 
-                cores e aparência. Suas propriedades incluem a separação do conteúdo (HTML) e estilo, 
-                permitindo o design flexível e responsivo das páginas. CSS é amplamente usado para criar designs atraentes e consistentes em sites, 
-                tornando a experiência do usuário mais agradável e acessível.''',
+                description: '''CSS (Cascading Style Sheets) é uma linguagem usada para estilizar páginas web, controlando o layout, cores e aparência. Suas propriedades incluem a separação do conteúdo (HTML) e estilo, permitindo o design flexível e responsivo das páginas. CSS é amplamente usado para criar designs atraentes e consistentes em sites, tornando a experiência do usuário mais agradável e acessível.''',
                 text: 'Repositório Github',
                 corTexto: Colors.white,
                 icon: Icon(

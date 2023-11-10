@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/components/profile_widget.dart';
-import 'package:portfolio/components/tecnologies_widget.dart';
+import 'package:portfolio/breakpoints.dart';
+import 'package:portfolio/components/app_bar/mobile_app_bar.dart';
+import 'package:portfolio/components/app_bar/web_app_bar.dart';
+import 'package:portfolio/components/sections/primarySection/mobile_primary_section.dart';
+import 'package:portfolio/components/sections/primarySection/profile_widget.dart';
+import 'package:portfolio/components/sections/primarySection/tecnologies_widget.dart';
+import 'package:portfolio/components/sections/primarySection/web_primary_section.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({super.key});
@@ -14,36 +19,28 @@ class _PortfolioState extends State<Portfolio> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-      ),
-      body: ListView(
-        shrinkWrap: true,
-        children: const [
-          Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  SizedBox(
-                    height: 10,
-                  ),
-                  ProfileWidget(),
-                  Column(
-                    children: [
-                      SizedBox(
-                        height: 40,
-                      ),
-                      TecnologiesWidget()
-                    ],
-                  )
-                ],
-              )
-            ],
-          ),
-        ],
-      )
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return Scaffold(
+          appBar: constraints.maxWidth < mobileBreakpoint
+              ? PreferredSize(
+                  child: MobileAppBar(),
+                  preferredSize: Size(double.infinity, 56),
+                )
+              : PreferredSize(
+                  child: WebAppBar(), preferredSize: Size(double.infinity, 72)),
+          drawer: constraints.maxWidth < mobileBreakpoint ? Drawer() : null,
+          body: constraints.maxWidth < mobileBreakpoint
+            ? PreferredSize(
+              child: MobilePrimarySection(),
+              preferredSize: Size(double.infinity, 66),
+            )
+            : PreferredSize(
+              child: WebPrimarySection(), preferredSize: Size(double.infinity, 72),
+            )
+          
+        );
+      }
     );
   }
 }

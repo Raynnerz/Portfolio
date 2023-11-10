@@ -14,7 +14,7 @@ class ProfileWidget extends StatelessWidget {
           Row(
             children: [
               Container(
-                width: 300,
+                width: 200,
                 height: 200,
                 child:  Image.asset('images/user_avatar.png', width: 150)
               ),
