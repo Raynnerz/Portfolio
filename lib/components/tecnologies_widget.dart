@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:portfolio/components/card_widget.dart';
 import 'package:portfolio/utils/custom_icons_icons.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
 
 class TecnologiesWidget extends StatefulWidget {
   const TecnologiesWidget({super.key});
@@ -19,7 +19,8 @@ class _TecnologiesWidgetState extends State<TecnologiesWidget> {
     return Column(
       children: [
         Container(
-          width: 800,
+          width: 500,
+          height: 450,
           child: FlutterCarousel(
             items: const [
               CardWidget(
@@ -34,7 +35,12 @@ class _TecnologiesWidgetState extends State<TecnologiesWidget> {
                   color: Colors.white,
                 ),
                 cor: Colors.black,
-                websiteUrl: 'https://github.com/Raynnerz',           
+                websiteUrl: 'https://github.com/Raynnerz/BackEnd-Java',
+                titleIcon: Icon(
+                  CustomIcons.java,
+                  size: 50,
+                ),
+                corIcon: Colors.red,        
               ),
               CardWidget(
                 title: Text('Python',
@@ -48,7 +54,12 @@ class _TecnologiesWidgetState extends State<TecnologiesWidget> {
                   color: Colors.white,
                 ),
                 cor: Colors.black,
-              websiteUrl: 'https://github.com/Raynnerz',           
+              websiteUrl: 'https://github.com/Raynnerz/Statistics-Python', 
+              titleIcon: Icon(
+                CustomIcons.python,
+                size: 50,
+              ),
+              corIcon: Color.fromARGB(255, 152, 199, 33),           
               ),
               CardWidget(
                 title: Text('Html',
@@ -62,7 +73,12 @@ class _TecnologiesWidgetState extends State<TecnologiesWidget> {
                   color: Colors.white,
                 ),
                 cor: Colors.black,
-                websiteUrl: 'https://github.com/Raynnerz',           
+                websiteUrl: 'https://github.com/Raynnerz/Bazar-Instrumentos-Musicais',
+                titleIcon: Icon(
+                  CustomIcons.html5,
+                  size: 50,
+                ),
+                corIcon: Color.fromARGB(255, 243, 159, 33),           
               ),
               CardWidget(
                 title: Text('Css',
@@ -76,13 +92,18 @@ class _TecnologiesWidgetState extends State<TecnologiesWidget> {
                   color: Colors.white,
                 ),
                 cor: Colors.black,
-                websiteUrl: 'https://github.com/Raynnerz',           
+                websiteUrl: 'https://github.com/Raynnerz/Bazar-Instrumentos-Musicais',
+                titleIcon: Icon(
+                  CustomIcons.css3_alt,
+                  size: 50,
+                ),      
+                corIcon: Colors.blue,     
               ),
               CardWidget(
                 title: Text('MongoDB',
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 67, 244, 54)),
                 ), 
-                description: '''CSS (Cascading Style Sheets) é uma linguagem usada para estilizar páginas web, controlando o layout, cores e aparência. Suas propriedades incluem a separação do conteúdo (HTML) e estilo, permitindo o design flexível e responsivo das páginas. CSS é amplamente usado para criar designs atraentes e consistentes em sites, tornando a experiência do usuário mais agradável e acessível.''',
+                description: '''MongoDB é um banco de dados NoSQL flexível e escalável, ideal para aplicativos com dados não estruturados. Armazena informações em documentos BSON com esquemas dinâmicos e é adequado para aplicativos web e Big Data.''',
                 text: 'Repositório Github',
                 corTexto: Colors.white,
                 icon: Icon(
@@ -90,9 +111,14 @@ class _TecnologiesWidgetState extends State<TecnologiesWidget> {
                   color: Colors.white,
                 ),
                 cor: Colors.black,
-                websiteUrl: 'https://github.com/Raynnerz',           
+                websiteUrl: 'https://github.com/Raynnerz/Pink-Flag/tree/main/src',
+                titleIcon: Icon(
+                  CustomIcons.leaf,
+                  size: 50,
+                ),   
+                corIcon: Color.fromARGB(255, 67, 244, 54)        
               ),
-            ], 
+            ],  
             options: CarouselOptions(
               autoPlay: false,
               controller: buttonCarouselController,

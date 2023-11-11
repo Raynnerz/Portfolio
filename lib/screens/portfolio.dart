@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/breakpoints.dart';
 import 'package:portfolio/components/app_bar/mobile_app_bar.dart';
 import 'package:portfolio/components/app_bar/web_app_bar.dart';
-import 'package:portfolio/components/sections/primarySection/mobile_primary_section.dart';
-import 'package:portfolio/components/sections/primarySection/profile_widget.dart';
-import 'package:portfolio/components/sections/primarySection/tecnologies_widget.dart';
-import 'package:portfolio/components/sections/primarySection/web_primary_section.dart';
+import 'package:portfolio/components/primarySection/mobile_primary_section.dart';
+import 'package:portfolio/components/primarySection/web_primary_section.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({super.key});
@@ -38,7 +36,7 @@ class _PortfolioState extends State<Portfolio> {
             : PreferredSize(
               child: WebPrimarySection(), preferredSize: Size(double.infinity, 72),
             )
-          
+            
         );
       }
     );

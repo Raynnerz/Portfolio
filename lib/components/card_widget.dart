@@ -3,6 +3,8 @@ import 'package:portfolio/components/socialbutton_widget.dart';
 
 class CardWidget extends StatelessWidget {
   final Text title;
+  final Icon titleIcon;
+  final Color? corIcon;
   final String description;
   final String text;
   final Icon icon;
@@ -17,7 +19,7 @@ class CardWidget extends StatelessWidget {
     required this.icon, 
     required this.text, 
     required this.websiteUrl, 
-    this.cor, this.corTexto
+    this.cor, this.corTexto, required this.titleIcon, this.corIcon
   });
 
   @override
@@ -25,20 +27,24 @@ class CardWidget extends StatelessWidget {
     return Center(
       child: Container(
         width: 500,
-        height: 500,
+        height: 300,
         child: Card(
           color: Color.fromARGB(255, 26, 24, 24),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
           child: Column(
-            mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               ListTile(
                 title: title,
               ),
-              SizedBox(
-                height: 10,
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100),
+                  color: corIcon,
+                  border: Border.all(width: 2)
+              ),
+              child: titleIcon,
               ),
               Padding(
                 padding: EdgeInsets.all(16.0),
@@ -48,7 +54,7 @@ class CardWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.all(20),
+                    padding: EdgeInsets.only(right: 16),
                     child: SocialButton(
                       text: text,
                       corTexto: corTexto,
